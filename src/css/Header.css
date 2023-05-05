@@ -1,0 +1,17 @@
+header {
+    display: flex;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Darumadrop One', cursive;
+    font-size: 1.4rem;
+    color: rgb(203, 203, 203);
+    background-color: rgb(16, 16, 36);
+}
+
+.header--title {
+    margin: 0;
+}

@@ -1,0 +1,40 @@
+.create--form {
+    height: 200px;
+    text-align: center;
+    padding: 2rem;
+}
+
+.create--subcontainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 1rem;
+    font-family: 'Heebo', sans-serif;
+}
+
+.create--form__input{
+    width: 50%;
+    outline: none;
+    font-family: 'Heebo', sans-serif;
+    background-color: rgb(227, 210, 255);
+    border: none;
+    border-radius: 3px;
+}
+
+.create--form__button {
+    padding: 5px;
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    font-family: 'Heebo', sans-serif;
+    font-size: .8rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(96, 59, 155);
+    cursor: pointer;
+}
+
+.create--form__button:hover {
+    background-color: rgb(57, 2, 147);
+}
