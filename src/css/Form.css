@@ -38,3 +38,9 @@
 .create--form__button:hover {
     background-color: rgb(57, 2, 147);
 }
+
+.meme-img{
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+}

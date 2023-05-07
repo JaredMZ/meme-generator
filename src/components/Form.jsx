@@ -31,7 +31,7 @@ export default function Form() {
           </button>
         </div>
       </form>
-      <img src={memeImage} alt="" />
+      <img className="meme-img" src={memeImage} alt="" />
     </div>
   );
 }
