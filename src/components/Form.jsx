@@ -3,16 +3,33 @@ import "../css/Form.css";
 import memesData from "../data/memesData";
 
 export default function Form() {
-  const [memeImage, setMemeImage] = useState("");
+  //useState for Meme Object
+  const [memeObj, setMemeObj] = useState({
+    topText: "",
+    bottomText: "",
+    randomImage: "http://i.imgflip.com/1bij.jpg"
+  });
 
+  //useState for All Memes Data
+  // eslint-disable-next-line no-unused-vars
+  const [allMemeImages, setAllMemeImages] = useState(memesData)
+
+  //Change Image of the Meme | MAIN FUNCTION
   function getMemeImage() {
-    const memes = memesData.data.memes;
+    const memes = allMemeImages.data.memes;
     const randomIndex = Math.floor(Math.random() * memes.length);
     const imgUrl = memes[randomIndex].url;
 
-    setMemeImage(imgUrl);
+    //Change Image URL with useState
+    setMemeObj(prevMeme => {
+      return {
+        ...prevMeme,
+        randomImage: imgUrl
+      }
+    });
   }
 
+  //Execute the main click function
   const handleClick = (event) => {
     event.preventDefault();
     getMemeImage();
@@ -31,7 +48,7 @@ export default function Form() {
           </button>
         </div>
       </form>
-      <img className="meme-img" src={memeImage} alt="" />
+      <img className="meme-img" src={memeObj.randomImage} alt="" />
     </div>
   );
 }
